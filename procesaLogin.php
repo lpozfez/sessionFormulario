@@ -10,16 +10,14 @@ if(isset($_POST['usuario'])&!empty($_POST['usuario'])){
     
         if($usuario==$usuBD['user'] & $usuBD['rol']=='admin'){
             $_SESSION['user']=$usuBD;
-            setcookie( $_SESSION['user']);
             header("Location: visita.php");
             
         }else{
-            header("Location: principal.php");
             $_GET['origen']='procesaLogin';
+            header("Location: principal.php");
         }
-    
 }else{
-    header("Location: principal.php");
     $_GET['origen']='procesaLogin';
+    header("Location: principal.php");
 }
 ?>

@@ -23,8 +23,10 @@ if(isset($_POST["entrar"])){
 if(isset($_POST["visitar"])){
     header("Location: visita.php");
 }
-/*
-if($_POST[$origen]=='procesaLogin'){
-    echo 'Usted no está registrado';
-}*/
+
+if(isset($_GET['origen'])){
+    if($_GET['origen']=='procesaLogin'){
+        echo '<h1>Usted no está no tiene permisos</h1>';
+    }
+}
 ?>

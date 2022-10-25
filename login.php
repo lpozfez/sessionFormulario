@@ -17,6 +17,11 @@ if(isset($_POST['enviar'])){
     if(empty($pass)){
         $errores['pass']='<span style="color:red">Intruzca una contraseña</span><br>';
     }
+
+    
+        if(isset($_GET['origen'])){
+            echo 'regístrese';
+        }
 }
 
 ?>

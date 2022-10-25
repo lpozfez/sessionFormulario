@@ -8,9 +8,14 @@
 </head>
 <body>
     <?php
-        echo $_COOKIE[];
+        
+        if(session_start()){
+            $usuario=$_SESSION['user'];
+            echo '<h1>Hola '.$usuario['user'].'</h1>';
+            
+        }
     ?>
-    <div id="bienvenido">
+    <div id="bienvenido" name="bienvenido">
         <h1>Hola visitante</h1>
     </div>
 </body>
